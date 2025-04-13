@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 /**
-el index.css lo dejamos vacio, pero sirve como punto de entrada .css para App (este ultimo lo está llamando) 
+el index.css lo dejamos vacio, pero sirve como punto de entrada .css para App (este ultimo lo está llamando)
 Seria como un css global
