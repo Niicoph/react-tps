@@ -1,8 +1,27 @@
+/**
+el index.css lo dejamos vacio, pero sirve como punto de entrada .css para App (este ultimo lo está llamando)
+Seria como un css global
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.inter-bold {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
 }
 
-/**
-el index.css lo dejamos vacio, pero sirve como punto de entrada .css para App (este ultimo lo está llamando)
-Seria como un css global
+.background {
+    background-color: #2D3D45;
+}
+
+.paragraph {
+    color: #99AABC;
+}

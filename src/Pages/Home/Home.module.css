@@ -2,7 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px 120px 0px 120px;
-    border: 1px solid blue;
     height: 100vh;
+    background-image: linear-gradient(to bottom, #1f2a2f, #1c252a, #192125, #161c20, #13181b);
+}
+
+
+.homeContent {
+    height: 100%;
+    width: 100%;
+    max-width: 960px; /*  w-3/6 */
+    margin: 0 auto;
 }

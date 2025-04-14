@@ -4,9 +4,11 @@ import styles from './Home.module.css';
 
 export default function Home() {
   return (
-    <section className={styles.home}>
-         <Header />
-         <Container />
-    </section>
+    <main className={styles.home}>
+        <Header />
+        <div className={styles.homeContent}>
+        {/* <Container /> */}
+        </div>
+    </main>
   )
 }
