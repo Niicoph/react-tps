@@ -10,11 +10,12 @@ Header {
     max-width: 960px; /*  w-3/6 */
     margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 .logo {
-    height: 100%;
+    height: 60%;
     width: 20%;
     object-fit: cover;
 }

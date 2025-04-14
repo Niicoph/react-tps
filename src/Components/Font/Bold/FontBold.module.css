@@ -1,0 +1,21 @@
+p {
+    position: relative;
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+  }
+
+  p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+  }
+
+  p:hover::after {
+    width: 100%;
+  }

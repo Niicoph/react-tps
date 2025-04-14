@@ -9,6 +9,7 @@ export default function Header() {
         <img src={Logo} alt="logo" className={styles.logo} />
         <ul className={styles.headerList}>
           <FontBold text={"Peliculas "} />
+          <FontBold text={"Series "} />
           <FontBold text={"Vistas "} />
           <FontBold text={"Pendientes "} />
         </ul>
