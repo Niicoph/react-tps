@@ -11,4 +11,7 @@
     width: 100%;
     max-width: 960px; /*  w-3/6 */
     margin: 0 auto;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }

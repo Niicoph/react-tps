@@ -1,0 +1,29 @@
+.filter {
+    border: 1px solid red;;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.selects {
+    display: flex;
+    gap: 10px;
+}
+
+.inputSearch {
+    padding: 2px;
+    border-radius: 5px;
+    color: #99AABC;
+    border: 1px solid #99AABC;
+}
+
+.selectsContainer {
+    display: flex;
+    gap: 10px;
+}
+.searchContainer {
+    display: flex;
+    gap: 10px;
+}
