@@ -1,21 +1,6 @@
-.container {
-    width: 100%;
-    height: 90%;
-    gap: 40px;
-    display: flex;
-    flex-direction: column;
+.addMovie:hover {
+    cursor: pointer;
 }
-
-.contentContainer {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    justify-content: center;
-  }
-
 
 .form {
     display: flex;
