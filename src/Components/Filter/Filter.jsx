@@ -38,10 +38,6 @@ export default function Filter() {
               "Ciencia Ficción",
             ]}
           />
-          <Select
-            title={"Clasificación"}
-            options={["G", "PG", "PG-13", "R", "NC-17"]}
-          />
           <Select title={"Rating"} options={["1", "2", "3", "4", "5"]} />
         </div>
       </div>
