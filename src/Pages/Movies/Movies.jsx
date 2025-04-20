@@ -13,6 +13,7 @@ export default function Movies() {
     titulo: "",
     genero: "",
     director: "",
+    tipo: "",
     año: "",
     rating: "",
     image_url: "",
@@ -40,17 +41,26 @@ export default function Movies() {
     setFormData({
       titulo: "",
       genero: "",
-      tipo: "",
+      tipo: "Pelicula",
       director: "",
       año: "",
       rating: "",
       image_url: "",
     });
   };
+
+  const handleEliminar = (id) => {
+    const peliculasActualizadas = peliculasGuardadas.filter(
+      (pelicula) => pelicula.id !== id
+    );
+    setPeliculasGuardadas(peliculasActualizadas);
+  }
+
   const handleFormChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
+
 
   return (
     <>
@@ -62,11 +72,18 @@ export default function Movies() {
           onClick={() => setModalOpen(true)}
         />
       </MovieContainer>
-      {peliculasGuardadas.map((pelicula) => (
-        <MovieContainer key={pelicula.id}>
-          <Content {...pelicula} />
-        </MovieContainer>
-      ))}
+
+      {peliculasGuardadas.length === 0 ? (
+        <div className={Styles.noMovies}>
+          <p className="paragraph">No hay películas guardadas</p>
+        </div>
+      ) : (
+        peliculasGuardadas.map((pelicula) => (
+          <MovieContainer key={pelicula.id}>
+            <Content {...pelicula} handleEliminar={handleEliminar} />
+          </MovieContainer>
+        ))
+      )}
 
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
         <h2>Agregar Película</h2>
@@ -121,4 +138,5 @@ export default function Movies() {
       </Modal>
     </>
   );
+
 }

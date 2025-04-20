@@ -26,3 +26,7 @@
     cursor: pointer;
     margin-top: 10px;
   }
+
+  .noSeries {
+    font-size: 20px;
+  }
