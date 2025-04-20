@@ -7,14 +7,19 @@ import Content from "../../Components/Content/Content";
 
 export default function Series() {
   const [seriesGuardadas, setSeriesGuardadas] = useState([]);
+  const [serieSeleccionada, setSerieSeleccionada] = useState(null);
+  const [nuevoRating, setNuevoRating] = useState(0);
+  const [modalVistaOpen, setModalVistaOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     titulo: "",
     genero: "",
     director: "",
     año: "",
-    rating: "",
+    rating: 0,
     image_url: "",
+    tipo: "Serie",
+    pendiente: false,
   });
 
   useEffect(() => {
@@ -31,7 +36,6 @@ export default function Series() {
     const nuevaSerie = {
       ...formData,
       id: Date.now(),
-      tipo: "Serie",
       rating: parseFloat(formData.rating),
       año: parseInt(formData.año),
     };
@@ -40,11 +44,12 @@ export default function Series() {
     setFormData({
       titulo: "",
       genero: "",
-      tipo: "Serie",
       director: "",
       año: "",
-      rating: "",
+      rating: 0,
       image_url: "",
+      tipo: "Serie",
+      pendiente: false,
     });
   };
 
@@ -58,6 +63,26 @@ export default function Series() {
   const handleFormChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleVista = (id) => {
+    const serie = seriesGuardadas.find((s) => s.id === id);
+    if (serie) {
+      setSerieSeleccionada(serie);
+      setModalVistaOpen(true);
+    }
+  };
+
+  const handleGuardarRating = () => {
+    const actualizadas = seriesGuardadas.map((s) =>
+      s.id === serieSeleccionada.id
+        ? { ...s, rating: parseFloat(nuevoRating) }
+        : s
+    );
+    setSeriesGuardadas(actualizadas);
+    setModalVistaOpen(false);
+    setSerieSeleccionada(null);
+    setNuevoRating(0);
   };
 
   return (
@@ -78,7 +103,11 @@ export default function Series() {
       ) : (
         seriesGuardadas.map((serie) => (
           <MovieContainer key={serie.id}>
-            <Content {...serie} handleEliminar={handleEliminar} />
+            <Content
+              {...serie}
+              handleEliminar={handleEliminar}
+              handleVista={handleVista}
+            />
           </MovieContainer>
         ))
       )}
@@ -118,15 +147,6 @@ export default function Series() {
             required
           />
           <input
-            type="number"
-            name="rating"
-            value={formData.rating}
-            onChange={handleFormChange}
-            placeholder="Rating"
-            step="0.1"
-            required
-          />
-          <input
             type="text"
             name="image_url"
             value={formData.image_url}
@@ -136,6 +156,35 @@ export default function Series() {
           />
           <button type="submit">Agregar Serie</button>
         </form>
+      </Modal>
+
+      <Modal isOpen={modalVistaOpen} onClose={() => setModalVistaOpen(false)}>
+        <h2>Calificar</h2>
+        {serieSeleccionada && (
+          <>
+            <p>{serieSeleccionada.titulo}</p>
+            <form
+              className={Styles.form}
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleGuardarRating();
+              }}
+            >
+              <input
+                type="number"
+                min="0"
+                max="10"
+                step="0.1"
+                name="rating"
+                placeholder="Nuevo Rating"
+                value={nuevoRating}
+                onChange={(e) => setNuevoRating(e.target.value)}
+                required
+              />
+              <button type="submit">Guardar</button>
+            </form>
+          </>
+        )}
       </Modal>
     </>
   );
