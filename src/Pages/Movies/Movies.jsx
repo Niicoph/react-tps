@@ -8,6 +8,9 @@ import Modal from "../../Components/Modal/Modal";
 
 export default function Movies() {
   const [peliculasGuardadas, setPeliculasGuardadas] = useState([]);
+  const [peliculaSeleccionada, setPeliculaSeleccionada] = useState(null);
+  const [nuevoRating, setNuevoRating] = useState(0);
+  const [modalVistaOpen, setModalVistaOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     titulo: "",
@@ -15,8 +18,9 @@ export default function Movies() {
     director: "",
     tipo: "",
     año: "",
-    rating: "",
+    rating: 0,
     image_url: "",
+    pendiente: false,
   });
 
   useEffect(() => {
@@ -41,11 +45,12 @@ export default function Movies() {
     setFormData({
       titulo: "",
       genero: "",
-      tipo: "Pelicula",
       director: "",
+      tipo: "",
       año: "",
-      rating: "",
+      rating: 0,
       image_url: "",
+      pendiente: false,
     });
   };
 
@@ -54,13 +59,31 @@ export default function Movies() {
       (pelicula) => pelicula.id !== id
     );
     setPeliculasGuardadas(peliculasActualizadas);
-  }
+  };
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
+  const handleVista = (id) => {
+    const pelicula = peliculasGuardadas.find((p) => p.id === id);
+    console.log(pelicula);
+    if (pelicula) {
+      setPeliculaSeleccionada(pelicula);
+      setModalVistaOpen(true);
+    }
+  };
+  const handleGuardarRating = () => {
+    const actualizadas = peliculasGuardadas.map((p) =>
+      p.id === peliculaSeleccionada.id
+        ? { ...p, rating: parseFloat(nuevoRating) }
+        : p
+    );
+    setPeliculasGuardadas(actualizadas);
+    setModalVistaOpen(false);
+    setPeliculaSeleccionada(null);
+    setNuevoRating(0);
+  };
 
   return (
     <>
@@ -80,7 +103,11 @@ export default function Movies() {
       ) : (
         peliculasGuardadas.map((pelicula) => (
           <MovieContainer key={pelicula.id}>
-            <Content {...pelicula} handleEliminar={handleEliminar} />
+            <Content
+              {...pelicula}
+              handleEliminar={handleEliminar}
+              handleVista={handleVista}
+            />
           </MovieContainer>
         ))
       )}
@@ -118,15 +145,6 @@ export default function Movies() {
             required
           />
           <input
-            name="rating"
-            placeholder="Rating"
-            type="number"
-            step="0.1"
-            value={formData.rating}
-            onChange={handleFormChange}
-            required
-          />
-          <input
             name="image_url"
             placeholder="URL de imagen"
             value={formData.image_url}
@@ -136,7 +154,34 @@ export default function Movies() {
           <button type="submit">Guardar</button>
         </form>
       </Modal>
+      <Modal isOpen={modalVistaOpen} onClose={() => setModalVistaOpen(false)}>
+        <h2>Calificar</h2>
+        {peliculaSeleccionada && (
+          <>
+            <p>{peliculaSeleccionada.titulo}</p>
+            <form
+              className={Styles.form}
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleGuardarRating();
+              }}
+            >
+              <input
+                type="number"
+                min="0"
+                max="10"
+                step="0.1"
+                name="rating"
+                placeholder="Nuevo Rating"
+                value={nuevoRating}
+                onChange={(e) => setNuevoRating(e.target.value)}
+                required
+              />
+              <button type="submit">Guardar</button>
+            </form>
+          </>
+        )}
+      </Modal>
     </>
   );
-
 }
