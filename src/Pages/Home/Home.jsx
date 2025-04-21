@@ -4,7 +4,7 @@ import Header from "../../Components/Header/Header";
 import styles from "./Home.module.css";
 
 export default function Home() {
-  const [ubicacion, setUbicacion] = useState("Peliculas");
+  const [ubicacion, setUbicacion] = useState("Catalogo");
 
   const handleUbicacionChange = (nuevaUbicacion) => {
     setUbicacion(nuevaUbicacion);
