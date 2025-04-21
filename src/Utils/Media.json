@@ -6,7 +6,9 @@
       "director": "Christopher Nolan",
       "año": 2010,
       "rating": 8.8,
-      "image_url": "https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
+      "id": 1
+      
     },
     {
       "titulo": "The Shawshank Redemption",
@@ -15,7 +17,8 @@
       "director": "Frank Darabont",
       "año": 1994,
       "rating": 9.3,
-      "image_url": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+      "id": 2
     },
     {
       "titulo": "Breaking Bad",
@@ -24,7 +27,8 @@
       "director": "Vince Gilligan",
       "año": 2008,
       "rating": 9.5,
-      "image_url": "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+      "id": 3
     },
     {
       "titulo": "Interstellar",
@@ -33,7 +37,8 @@
       "director": "Christopher Nolan",
       "año": 2014,
       "rating": 8.6,
-      "image_url": "https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg",
+      "id": 4
     },
     {
       "titulo": "The Godfather",
@@ -42,7 +47,8 @@
       "director": "Francis Ford Coppola",
       "año": 1972,
       "rating": 9.2,
-      "image_url": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+      "id": 5
     },
     {
       "titulo": "The Dark Knight",
@@ -51,7 +57,8 @@
       "director": "Christopher Nolan",
       "año": 2008,
       "rating": 9.0,
-      "image_url": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+      "id": 6
     },
     {
       "titulo": "Fight Club",
@@ -60,7 +67,8 @@
       "director": "David Fincher",
       "año": 1999,
       "rating": 8.8,
-      "image_url": "https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg",
+      "id": 7
     },
     {
       "titulo": "Forrest Gump",
@@ -69,7 +77,8 @@
       "director": "Robert Zemeckis",
       "año": 1994,
       "rating": 8.8,
-      "image_url": "https://image.tmdb.org/t/p/w500/saHP97rTPS5eLmrLQEcANmKrsFl.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/saHP97rTPS5eLmrLQEcANmKrsFl.jpg",
+      "id": 8
     },
     {
       "titulo": "Stranger Things",
@@ -78,7 +87,8 @@
       "director": "The Duffer Brothers",
       "año": 2016,
       "rating": 8.7,
-      "image_url": "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
+      "id": 9
     },
     {
       "titulo": "The Matrix",
@@ -87,7 +97,8 @@
       "director": "Lana Wachowski, Lilly Wachowski",
       "año": 1999,
       "rating": 8.7,
-      "image_url": "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+      "id": 10
     },
     {
       "titulo": "Gladiator",
@@ -96,7 +107,8 @@
       "director": "Ridley Scott",
       "año": 2000,
       "rating": 8.5,
-      "image_url": "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
+      "id": 11
     },
     {
       "titulo": "Chernobyl",
@@ -105,16 +117,18 @@
       "director": "Craig Mazin",
       "año": 2019,
       "rating": 9.4,
-      "image_url": "https://image.tmdb.org/t/p/w500/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
+      "id": 12
     },
     {
       "titulo": "The Social Dilemma",
       "genero": "Documental",
-      "tipo": "Documental",
+      "tipo": "Serie",
       "director": "Jeff Orlowski",
       "año": 2020,
       "rating": 7.6,
-      "image_url": "https://image.tmdb.org/t/p/w500/eZ3GzTUyCddzMYY5xjUY6zyTAiR.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/jdmagxKK7g2rPkdltC7Kga2MBbp.jpg",
+      "id": 13
     },
     {
       "titulo": "Pulp Fiction",
@@ -123,7 +137,8 @@
       "director": "Quentin Tarantino",
       "año": 1994,
       "rating": 8.9,
-      "image_url": "https://image.tmdb.org/t/p/w500/dM2w364MScsjFf8pfMbaWUcWrR.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+      "id": 14
     },
     {
       "titulo": "The Office",
@@ -132,7 +147,8 @@
       "director": "Greg Daniels",
       "año": 2005,
       "rating": 8.9,
-      "image_url": "https://image.tmdb.org/t/p/w500/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg",
+      "id": 15
     },
     {
       "titulo": "The Crown",
@@ -141,7 +157,8 @@
       "director": "Peter Morgan",
       "año": 2016,
       "rating": 8.6,
-      "image_url": "https://image.tmdb.org/t/p/w500/ltzvX5dC7M4JknPk8UZiRZ44iNn.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/1DDE0Z2Y805rqfkEjPbZsMLyPwa.jpg",
+      "id": 16
     },
     {
       "titulo": "Parasite",
@@ -150,7 +167,8 @@
       "director": "Bong Joon-ho",
       "año": 2019,
       "rating": 8.6,
-      "image_url": "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+      "id": 17
     },
     {
       "titulo": "Black Mirror",
@@ -159,7 +177,8 @@
       "director": "Charlie Brooker",
       "año": 2011,
       "rating": 8.8,
-      "image_url": "https://image.tmdb.org/t/p/w500/nrSaXF39nDfAAeLKksRCyvSzI2a.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/nrSaXF39nDfAAeLKksRCyvSzI2a.jpg",
+      "id": 18
     },
     {
       "titulo": "The Mandalorian",
@@ -168,7 +187,8 @@
       "director": "Jon Favreau",
       "año": 2019,
       "rating": 8.6,
-      "image_url": "https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+      "id": 19
     },
     {
       "titulo": "Joker",
@@ -177,16 +197,18 @@
       "director": "Todd Phillips",
       "año": 2019,
       "rating": 8.4,
-      "image_url": "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+      "id": 20
     },
     {
       "titulo": "Seaspiracy",
       "genero": "Documental",
-      "tipo": "Documental",
+      "tipo": "Serie",
       "director": "Ali Tabrizi",
       "año": 2021,
       "rating": 8.2,
-      "image_url": "https://image.tmdb.org/t/p/w500/mYtrzA3JxD1m9NcyvvXMyocivtr.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/iFNri0fwn1WfCoxf3H3v1z8dCm4.jpg",
+      "id": 21
     },
     {
       "titulo": "Mindhunter",
@@ -195,7 +217,8 @@
       "director": "Joe Penhall",
       "año": 2017,
       "rating": 8.6,
-      "image_url": "https://image.tmdb.org/t/p/w500/1m5vZH94S6uShjx33FVMvcTzBv9.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/fbKE87mojpIETWepSbD5Qt741fp.jpg",
+      "id": 22
     },
     {
       "titulo": "Django Unchained",
@@ -204,16 +227,18 @@
       "director": "Quentin Tarantino",
       "año": 2012,
       "rating": 8.4,
-      "image_url": "https://image.tmdb.org/t/p/w500/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg",
+      "id": 23
     },
     {
       "titulo": "The Last Dance",
       "genero": "Deporte",
-      "tipo": "Documental",
-      "director": "Jason Hehir",
+      "tipo": "Serie",
+      "director": "Michael Tollin",
       "año": 2020,
       "rating": 9.1,
-      "image_url": "https://image.tmdb.org/t/p/w500/zR6cQ4B4YNWfVv1tOeRZrF1h0Pu.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/oVf4xGGbDtwVHiKn8uTuSriY7PH.jpg",
+      "id": 24
     },
     {
       "titulo": "Tenet",
@@ -222,7 +247,8 @@
       "director": "Christopher Nolan",
       "año": 2020,
       "rating": 7.8,
-      "image_url": "https://image.tmdb.org/t/p/w500/k68nPLbIST6NP96JmTxmZijEvCA.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/k68nPLbIST6NP96JmTxmZijEvCA.jpg",
+      "id": 25
     },
     {
       "titulo": "Better Call Saul",
@@ -231,7 +257,8 @@
       "director": "Vince Gilligan",
       "año": 2015,
       "rating": 8.9,
-      "image_url": "https://image.tmdb.org/t/p/w500/fC2HDm5t0kHl7mTm7jxMR31b7by.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/fC2HDm5t0kHl7mTm7jxMR31b7by.jpg",
+      "id": 26
     },
     {
       "titulo": "The Queen's Gambit",
@@ -240,7 +267,8 @@
       "director": "Scott Frank",
       "año": 2020,
       "rating": 8.6,
-      "image_url": "https://image.tmdb.org/t/p/w500/zU0htwkhNvBQdVSIKB9s6hgVeFK.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/zU0htwkhNvBQdVSIKB9s6hgVeFK.jpg",
+      "id": 27
     },
     {
       "titulo": "Whiplash",
@@ -249,7 +277,8 @@
       "director": "Damien Chazelle",
       "año": 2014,
       "rating": 8.5,
-      "image_url": "https://image.tmdb.org/t/p/w500/oPxnRhyAIzJKGUEdSiwTJQBa3NM.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/oPxnRhyAIzJKGUEdSiwTJQBa3NM.jpg",
+      "id": 28
     },
     {
       "titulo": "The Irishman",
@@ -258,7 +287,8 @@
       "director": "Martin Scorsese",
       "año": 2019,
       "rating": 7.9,
-      "image_url": "https://image.tmdb.org/t/p/w500/mbm8k3GFhXS0ROd9AD1gqYbIFbM.jpg"
+      "image_url": "https://image.tmdb.org/t/p/w500/mbm8k3GFhXS0ROd9AD1gqYbIFbM.jpg",
+      "id": 29
     }
   ]
   
