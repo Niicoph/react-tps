@@ -54,8 +54,8 @@ export default function Filter({ handleFilterChange , filter }) {
           name="order"
           value={filter.order}
           onChange={handleFilterChange}
-          title={"A-Z"}
-          options={["Z-A", "Año ↑", "Año ↓", "Rating ↑", "Rating ↓"]}
+          title={"Orden"}
+          options={["A-Z", "Z-A", "Año ↑", "Año ↓", "Rating ↑", "Rating ↓"]}
         />
       </div>
     </div>
