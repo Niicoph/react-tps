@@ -6,6 +6,7 @@ import AddIcon from "../../assets/Icons/add.svg";
 import Styles from "./Catalogo.module.css";
 import Modal from "../../Components/Modal/Modal";
 import PreMedia from "../../Utils/Media.json";
+import Select from "../../Components/Select/Select";
 
 export default function Catalogo({ filter }) {
   const [mediaSaved, setMediaSaved] = useState([]);
@@ -171,12 +172,26 @@ export default function Catalogo({ filter }) {
             onChange={handleFormChange}
             required
           />
-          <input
+          {/* <input
             name="genero"
             placeholder="Género"
             value={formData.genero}
             onChange={handleFormChange}
             required
+          /> */}
+          <Select
+            name="genero"
+            value={formData.genero}
+            onChange={handleFormChange}
+            title={"Género"}
+            options={[
+              "Acción",
+              "Aventura",
+              "Comedia",
+              "Drama",
+              "Terror",
+              "Ciencia Ficción",
+            ]}
           />
           <input
             name="director"
@@ -219,7 +234,7 @@ export default function Catalogo({ filter }) {
                 type="number"
                 min="0"
                 max="10"
-                step="0.1"
+                step="1"
                 name="rating"
                 placeholder="Nuevo Rating"
                 value={nuevoRating}
