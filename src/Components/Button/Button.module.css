@@ -1,0 +1,20 @@
+.button {
+    border-radius: 5px;
+    color: #99AABC;
+    background-color: #2D3D45;
+}
+
+.default {
+    color: #99AABC;
+    background-color: #2D3D45;
+}
+
+.submit {
+    color: white;
+    background-color: #1a5223;
+}
+
+.delete {
+    color: white;
+    background-color: rgb(128, 22, 22);
+}
