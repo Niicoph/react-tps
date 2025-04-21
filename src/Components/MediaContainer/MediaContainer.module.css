@@ -1,4 +1,4 @@
-.movieContainer {
+.mediaContainer {
     height: 100%;
     max-width: 230px;
     min-height: 370px;
@@ -15,7 +15,7 @@
     justify-content: center;
   }
 
-  .movieContainer:hover {
+  .mediaContainer:hover {
     transform: scale(1.03);
     border-color: white;
   }

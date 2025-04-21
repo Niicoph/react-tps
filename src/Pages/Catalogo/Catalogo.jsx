@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
-import MovieContainer from "../../Components/MediaContainer/MediaContainer";
-import AddIcon from "../../assets/Icons/add.svg";
-import Styles from "./Series.module.css";
-import Modal from "../../Components/Modal/Modal";
+import React from "react";
+import { useEffect, useState } from "react";
+import MediaContainer from "../../Components/MediaContainer/MediaContainer";
 import Content from "../../Components/Content/Content";
+import AddIcon from "../../assets/Icons/add.svg";
+import Styles from "./Catalogo.module.css";
+import Modal from "../../Components/Modal/Modal";
+import PreMedia from '../../Utils/Media.json';
 
-export default function Series() {
-  const [seriesGuardadas, setSeriesGuardadas] = useState([]);
-  const [serieSeleccionada, setSerieSeleccionada] = useState(null);
+export default function Catalogo() {
+  const [mediaSaved, setMediaSaved] = useState([]);
+  const [mediaSelected, setMediaSelected] = useState(null);
   const [nuevoRating, setNuevoRating] = useState(0);
   const [modalVistaOpen, setModalVistaOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -15,154 +17,160 @@ export default function Series() {
     titulo: "",
     genero: "",
     director: "",
+    tipo: "",
     año: "",
     rating: 0,
     image_url: "",
-    tipo: "Serie",
     pendiente: false,
   });
+  
+  useEffect(() => {
+    const media = localStorage.getItem('media');
+    console.log(media);
+
+    if (!media || media == "[]") {
+      // Guardar el array en localStorage
+      localStorage.setItem("media", JSON.stringify(PreMedia));
+    }
+  }, []);
+
 
   useEffect(() => {
-    const series = JSON.parse(localStorage.getItem("series")) || [];
-    setSeriesGuardadas(series);
+    const media = JSON.parse(localStorage.getItem("media")) || [];
+    setMediaSaved(media);
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("series", JSON.stringify(seriesGuardadas));
-  }, [seriesGuardadas]);
+    localStorage.setItem("media", JSON.stringify(mediaSaved));
+  }, [mediaSaved]);
 
-  const agregarSerie = (e) => {
+  const agregarPelicula = (e) => {
     e.preventDefault();
-    const nuevaSerie = {
+    const nuevaPelicula = {
       ...formData,
       id: Date.now(),
       rating: parseFloat(formData.rating),
       año: parseInt(formData.año),
     };
-    setSeriesGuardadas((prev) => [...prev, nuevaSerie]);
+    setMediaSaved((prev) => [...prev, nuevaPelicula]);
     setModalOpen(false);
     setFormData({
       titulo: "",
       genero: "",
       director: "",
+      tipo: "",
       año: "",
       rating: 0,
       image_url: "",
-      tipo: "Serie",
       pendiente: false,
     });
   };
 
   const handleEliminar = (id) => {
-    const seriesActualizadas = seriesGuardadas.filter(
-      (serie) => serie.id !== id
+    const mediaUpdated = mediaSaved.filter(
+      (media) => media.id != id
     );
-    setSeriesGuardadas(seriesActualizadas);
+    setMediaSaved(mediaUpdated);
   };
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
   const handleVista = (id) => {
-    const serie = seriesGuardadas.find((s) => s.id === id);
-    if (serie) {
-      setSerieSeleccionada(serie);
+    const media = mediaSaved.find((p) => p.id === id);
+    console.log(media);
+    if (media) {
+      setMediaSelected(media);
       setModalVistaOpen(true);
     }
   };
-
   const handleGuardarRating = () => {
-    const actualizadas = seriesGuardadas.map((s) =>
-      s.id === serieSeleccionada.id
-        ? { ...s, rating: parseFloat(nuevoRating) }
-        : s
+    const actualizadas = mediaSaved.map((p) =>
+      p.id === mediaSelected.id
+        ? { ...p, rating: parseFloat(nuevoRating) }
+        : p
     );
-    setSeriesGuardadas(actualizadas);
+    setMediaSaved(actualizadas);
     setModalVistaOpen(false);
-    setSerieSeleccionada(null);
+    setMediaSelected(null);
     setNuevoRating(0);
   };
 
   return (
     <>
-      <MovieContainer>
+      <MediaContainer>
         <img
           src={AddIcon}
           alt="add"
           className={Styles.addMovie}
           onClick={() => setModalOpen(true)}
         />
-      </MovieContainer>
+      </MediaContainer>
 
-      {seriesGuardadas.length === 0 ? (
-        <div className={Styles.noSeries}>
-          <p className="paragraph">No hay series guardadas</p>
+      {mediaSaved.length === 0 ? (
+        <div className={Styles.noMovies}>
+          <p className="paragraph">No hay medios guardados</p>
         </div>
       ) : (
-        seriesGuardadas.map((serie) => (
-          <MovieContainer key={serie.id}>
+        mediaSaved.map((media) => (
+          <MediaContainer key={media.id}>
             <Content
-              {...serie}
+              {...media}
               handleEliminar={handleEliminar}
               handleVista={handleVista}
             />
-          </MovieContainer>
+          </MediaContainer>
         ))
       )}
 
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
-        <form onSubmit={agregarSerie} className={Styles.form}>
+        <h2>Agregar Película</h2>
+        <form onSubmit={agregarPelicula} className={Styles.form}>
           <input
-            type="text"
             name="titulo"
+            placeholder="Título"
             value={formData.titulo}
             onChange={handleFormChange}
-            placeholder="Título"
             required
           />
           <input
-            type="text"
             name="genero"
+            placeholder="Género"
             value={formData.genero}
             onChange={handleFormChange}
-            placeholder="Género"
             required
           />
           <input
-            type="text"
             name="director"
+            placeholder="Director"
             value={formData.director}
             onChange={handleFormChange}
-            placeholder="Director"
             required
           />
           <input
-            type="number"
             name="año"
+            placeholder="Año"
+            type="number"
             value={formData.año}
             onChange={handleFormChange}
-            placeholder="Año"
             required
           />
           <input
-            type="text"
             name="image_url"
+            placeholder="URL de imagen"
             value={formData.image_url}
             onChange={handleFormChange}
-            placeholder="URL de la imagen"
             required
           />
-          <button type="submit">Agregar Serie</button>
+          <button type="submit">Guardar</button>
         </form>
       </Modal>
-
       <Modal isOpen={modalVistaOpen} onClose={() => setModalVistaOpen(false)}>
         <h2>Calificar</h2>
-        {serieSeleccionada && (
+        {mediaSelected && (
           <>
-            <p>{serieSeleccionada.titulo}</p>
+            <p>{mediaSelected.titulo}</p>
             <form
               className={Styles.form}
               onSubmit={(e) => {

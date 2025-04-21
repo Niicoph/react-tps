@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import MovieContainer from "../../Components/MovieContainer/MovieContainer";
+import MovieContainer from "../../Components/MediaContainer/MediaContainer";
 import Content from "../../Components/Content/Content";
 import AddIcon from "../../assets/Icons/add.svg";
 import Styles from "./Movies.module.css";
