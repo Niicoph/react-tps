@@ -5,7 +5,7 @@ import Content from "../../Components/Content/Content";
 import AddIcon from "../../assets/Icons/add.svg";
 import Styles from "./Catalogo.module.css";
 import Modal from "../../Components/Modal/Modal";
-import PreMedia from '../../Utils/Media.json';
+import PreMedia from "../../Utils/Media.json";
 
 export default function Catalogo() {
   const [mediaSaved, setMediaSaved] = useState([]);
@@ -23,9 +23,9 @@ export default function Catalogo() {
     image_url: "",
     pendiente: false,
   });
-  
+
   useEffect(() => {
-    const media = localStorage.getItem('media');
+    const media = localStorage.getItem("media");
     console.log(media);
 
     if (!media || media == "[]") {
@@ -33,7 +33,6 @@ export default function Catalogo() {
       localStorage.setItem("media", JSON.stringify(PreMedia));
     }
   }, []);
-
 
   useEffect(() => {
     const media = JSON.parse(localStorage.getItem("media")) || [];
@@ -67,9 +66,7 @@ export default function Catalogo() {
   };
 
   const handleEliminar = (id) => {
-    const mediaUpdated = mediaSaved.filter(
-      (media) => media.id != id
-    );
+    const mediaUpdated = mediaSaved.filter((media) => media.id != id);
     setMediaSaved(mediaUpdated);
   };
 
@@ -79,7 +76,6 @@ export default function Catalogo() {
   };
   const handleVista = (id) => {
     const media = mediaSaved.find((p) => p.id === id);
-    console.log(media);
     if (media) {
       setMediaSelected(media);
       setModalVistaOpen(true);
@@ -87,14 +83,22 @@ export default function Catalogo() {
   };
   const handleGuardarRating = () => {
     const actualizadas = mediaSaved.map((p) =>
-      p.id === mediaSelected.id
-        ? { ...p, rating: parseFloat(nuevoRating) }
-        : p
+      p.id === mediaSelected.id ? { ...p, rating: parseFloat(nuevoRating) } : p
     );
     setMediaSaved(actualizadas);
     setModalVistaOpen(false);
     setMediaSelected(null);
     setNuevoRating(0);
+  };
+  const handlePendiente = (id) => {
+    const media = mediaSaved.find((p) => p.id === id);
+    if (media) {
+      const mediaUpdated = { ...media, pendiente: !media.pendiente };
+      const mediaUpdatedList = mediaSaved.map((p) =>
+        p.id === id ? mediaUpdated : p
+      );
+      setMediaSaved(mediaUpdatedList);
+    }
   };
 
   return (
@@ -119,6 +123,7 @@ export default function Catalogo() {
               {...media}
               handleEliminar={handleEliminar}
               handleVista={handleVista}
+              handlePendiente={handlePendiente}
             />
           </MediaContainer>
         ))

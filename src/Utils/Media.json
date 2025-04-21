@@ -5,10 +5,9 @@
       "tipo": "Película",
       "director": "Christopher Nolan",
       "año": 2010,
-      "rating": 8.8,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
       "id": 1
-      
     },
     {
       "titulo": "The Shawshank Redemption",
@@ -16,7 +15,7 @@
       "tipo": "Película",
       "director": "Frank Darabont",
       "año": 1994,
-      "rating": 9.3,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
       "id": 2
     },
@@ -26,7 +25,7 @@
       "tipo": "Serie",
       "director": "Vince Gilligan",
       "año": 2008,
-      "rating": 9.5,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
       "id": 3
     },
@@ -36,7 +35,7 @@
       "tipo": "Película",
       "director": "Christopher Nolan",
       "año": 2014,
-      "rating": 8.6,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg",
       "id": 4
     },
@@ -46,7 +45,7 @@
       "tipo": "Película",
       "director": "Francis Ford Coppola",
       "año": 1972,
-      "rating": 9.2,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
       "id": 5
     },
@@ -56,7 +55,7 @@
       "tipo": "Película",
       "director": "Christopher Nolan",
       "año": 2008,
-      "rating": 9.0,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
       "id": 6
     },
@@ -66,7 +65,7 @@
       "tipo": "Película",
       "director": "David Fincher",
       "año": 1999,
-      "rating": 8.8,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg",
       "id": 7
     },
@@ -76,7 +75,7 @@
       "tipo": "Película",
       "director": "Robert Zemeckis",
       "año": 1994,
-      "rating": 8.8,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/saHP97rTPS5eLmrLQEcANmKrsFl.jpg",
       "id": 8
     },
@@ -86,7 +85,7 @@
       "tipo": "Serie",
       "director": "The Duffer Brothers",
       "año": 2016,
-      "rating": 8.7,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
       "id": 9
     },
@@ -96,7 +95,7 @@
       "tipo": "Película",
       "director": "Lana Wachowski, Lilly Wachowski",
       "año": 1999,
-      "rating": 8.7,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
       "id": 10
     },
@@ -106,7 +105,7 @@
       "tipo": "Película",
       "director": "Ridley Scott",
       "año": 2000,
-      "rating": 8.5,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
       "id": 11
     },
@@ -116,7 +115,7 @@
       "tipo": "Serie",
       "director": "Craig Mazin",
       "año": 2019,
-      "rating": 9.4,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
       "id": 12
     },
@@ -126,7 +125,7 @@
       "tipo": "Serie",
       "director": "Jeff Orlowski",
       "año": 2020,
-      "rating": 7.6,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/jdmagxKK7g2rPkdltC7Kga2MBbp.jpg",
       "id": 13
     },
@@ -136,7 +135,7 @@
       "tipo": "Película",
       "director": "Quentin Tarantino",
       "año": 1994,
-      "rating": 8.9,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
       "id": 14
     },
@@ -146,7 +145,7 @@
       "tipo": "Serie",
       "director": "Greg Daniels",
       "año": 2005,
-      "rating": 8.9,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg",
       "id": 15
     },
@@ -156,7 +155,7 @@
       "tipo": "Serie",
       "director": "Peter Morgan",
       "año": 2016,
-      "rating": 8.6,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/1DDE0Z2Y805rqfkEjPbZsMLyPwa.jpg",
       "id": 16
     },
@@ -166,7 +165,7 @@
       "tipo": "Película",
       "director": "Bong Joon-ho",
       "año": 2019,
-      "rating": 8.6,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
       "id": 17
     },
@@ -176,7 +175,7 @@
       "tipo": "Serie",
       "director": "Charlie Brooker",
       "año": 2011,
-      "rating": 8.8,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/nrSaXF39nDfAAeLKksRCyvSzI2a.jpg",
       "id": 18
     },
@@ -186,7 +185,7 @@
       "tipo": "Serie",
       "director": "Jon Favreau",
       "año": 2019,
-      "rating": 8.6,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
       "id": 19
     },
@@ -196,7 +195,7 @@
       "tipo": "Película",
       "director": "Todd Phillips",
       "año": 2019,
-      "rating": 8.4,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
       "id": 20
     },
@@ -206,7 +205,7 @@
       "tipo": "Serie",
       "director": "Ali Tabrizi",
       "año": 2021,
-      "rating": 8.2,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/iFNri0fwn1WfCoxf3H3v1z8dCm4.jpg",
       "id": 21
     },
@@ -216,7 +215,7 @@
       "tipo": "Serie",
       "director": "Joe Penhall",
       "año": 2017,
-      "rating": 8.6,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/fbKE87mojpIETWepSbD5Qt741fp.jpg",
       "id": 22
     },
@@ -226,7 +225,7 @@
       "tipo": "Película",
       "director": "Quentin Tarantino",
       "año": 2012,
-      "rating": 8.4,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg",
       "id": 23
     },
@@ -236,7 +235,7 @@
       "tipo": "Serie",
       "director": "Michael Tollin",
       "año": 2020,
-      "rating": 9.1,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/oVf4xGGbDtwVHiKn8uTuSriY7PH.jpg",
       "id": 24
     },
@@ -246,7 +245,7 @@
       "tipo": "Película",
       "director": "Christopher Nolan",
       "año": 2020,
-      "rating": 7.8,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/k68nPLbIST6NP96JmTxmZijEvCA.jpg",
       "id": 25
     },
@@ -256,7 +255,7 @@
       "tipo": "Serie",
       "director": "Vince Gilligan",
       "año": 2015,
-      "rating": 8.9,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/fC2HDm5t0kHl7mTm7jxMR31b7by.jpg",
       "id": 26
     },
@@ -266,7 +265,7 @@
       "tipo": "Serie",
       "director": "Scott Frank",
       "año": 2020,
-      "rating": 8.6,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/zU0htwkhNvBQdVSIKB9s6hgVeFK.jpg",
       "id": 27
     },
@@ -276,7 +275,7 @@
       "tipo": "Película",
       "director": "Damien Chazelle",
       "año": 2014,
-      "rating": 8.5,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/oPxnRhyAIzJKGUEdSiwTJQBa3NM.jpg",
       "id": 28
     },
@@ -286,9 +285,8 @@
       "tipo": "Película",
       "director": "Martin Scorsese",
       "año": 2019,
-      "rating": 7.9,
+      "rating": 0,
       "image_url": "https://image.tmdb.org/t/p/w500/mbm8k3GFhXS0ROd9AD1gqYbIFbM.jpg",
       "id": 29
     }
   ]
-  

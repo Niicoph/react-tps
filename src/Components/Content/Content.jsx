@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./Content.module.css";
 import SeenIcon from "../../assets/Icons/seen.svg";
+import NoSeenIcon from "../../assets/Icons/noseen.svg";
 import DeleteIcon from "../../assets/Icons/delete.svg";
-import WatchlistIcon from "../../assets/Icons/watchlist.svg";
-import Modal from "../Modal/Modal";
+import WatchlistIcon from "../../assets/Icons/pending.svg";
+import NoWatchListIcon from "../../assets/Icons/nopending.svg";
 
 export default function Content({
   titulo,
@@ -14,10 +15,11 @@ export default function Content({
   rating,
   image_url,
   id,
+  pendiente,
   handleEliminar,
   handleVista,
+  handlePendiente,
 }) {
-
   return (
     <div className={styles.content}>
       <div className={styles.posterWrapper}>
@@ -44,7 +46,7 @@ export default function Content({
 
       <div className={styles.actions}>
         <img
-          src={SeenIcon}
+          src={rating ? NoSeenIcon : SeenIcon}
           alt="Marcar como vista"
           title="Marcar como vista"
           onClick={() => handleVista(id)}
@@ -56,9 +58,10 @@ export default function Content({
           onClick={() => handleEliminar(id)}
         />
         <img
-          src={WatchlistIcon}
+          src={pendiente ? NoWatchListIcon : WatchlistIcon}
           alt="Agregar a pendientes"
           title="Agregar a lista de pendientes"
+          onClick={() => handlePendiente(id)}
         />
       </div>
     </div>

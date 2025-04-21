@@ -61,10 +61,6 @@ export default function Movies() {
     setPeliculasGuardadas(peliculasActualizadas);
   };
 
-  const handleFormChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
   const handleVista = (id) => {
     const pelicula = peliculasGuardadas.find((p) => p.id === id);
     console.log(pelicula);
@@ -73,6 +69,12 @@ export default function Movies() {
       setModalVistaOpen(true);
     }
   };
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   const handleGuardarRating = () => {
     const actualizadas = peliculasGuardadas.map((p) =>
       p.id === peliculaSeleccionada.id
@@ -84,6 +86,11 @@ export default function Movies() {
     setPeliculaSeleccionada(null);
     setNuevoRating(0);
   };
+
+  const handlePendiente = (id) => {
+    // verificamos que tenga el pendiente en false
+    const pelicula = peliculasGuardadas.find((p) => p.id === id);
+  }
 
   return (
     <>

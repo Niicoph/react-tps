@@ -12,7 +12,7 @@
 }
 
 .inputSearch {
-    padding: 2px;
+    height: 20px;
     border-radius: 5px;
     color: #99AABC;
     border: 1px solid #99AABC;
@@ -25,6 +25,7 @@
 }
 .searchContainer {
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 
