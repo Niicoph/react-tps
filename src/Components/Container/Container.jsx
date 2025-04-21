@@ -10,17 +10,16 @@ export default function Container({ ubicacion }) {
     genero: "",
     order: "",
     nombre : "",
+    tipo: "",
   });
 
   const handleFilterChange = (e) => {
-    console.log(e.target.value);
     const { name, value } = e.target;
     setFilter((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
-
 
   return (
     <div className={Styles.container}>

@@ -1,7 +1,6 @@
 import FontLight from "../Font/Light/FontLight";
 import Styles from "./Filter.module.css";
 import Select from "../Select/Select";
-import Button from "../Button/Button";
 
 export default function Filter({ handleFilterChange , filter }) {
   return (
@@ -9,11 +8,6 @@ export default function Filter({ handleFilterChange , filter }) {
       <div className={Styles.selectsContainer}>
         <FontLight text="Buscar por" />
         <div className={Styles.selects}>
-          {/*<Select
-            handleFilterChange={handleFilterChange}
-            title={"Año"}
-            options={["1970s", "1980s", "1990s", "2000s", "2010s", "2020s"]}
-          />*/}
           <Select
             title={"Género"}
             name="genero"
@@ -28,12 +22,17 @@ export default function Filter({ handleFilterChange , filter }) {
               "Ciencia Ficción",
             ]}
           />
-          {/*<Select title={"Rating"} options={["1", "2", "3", "4", "5"]} />*/}
+          <Select
+            title={"Tipo"}
+            name="tipo"
+            value={filter.tipo}
+            onChange={handleFilterChange}
+            options={[
+              "Película",
+              "Serie",
+            ]}
+          />
         </div>
-        {/*<div className={Styles.selectsContainer}>
-          <Button title={"Aplicar Filtros"} type ="submit" onClick={() => {}}/>
-          <Button title={"Borrar Filtros"} type = "delete" onClick={() => {}}/>
-        </div>*/}
       </div>
 
       <div className={Styles.searchContainer}>
@@ -41,9 +40,9 @@ export default function Filter({ handleFilterChange , filter }) {
         <input
           onChange={handleFilterChange}
           type="text"
-          name="name"
+          name="nombre"
           id="name"
-          value={filter.name}
+          value={filter.nombre}
           className={`background ${Styles.inputSearch}`}
         />
       </div>

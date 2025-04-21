@@ -74,6 +74,7 @@ export default function Catalogo({ filter }) {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
+
   const handleVista = (id) => {
     const media = mediaSaved.find((p) => p.id === id);
     if (media) {
@@ -81,6 +82,7 @@ export default function Catalogo({ filter }) {
       setModalVistaOpen(true);
     }
   };
+
   const handleGuardarRating = () => {
     const actualizadas = mediaSaved.map((p) =>
       p.id === mediaSelected.id ? { ...p, rating: parseFloat(nuevoRating) } : p
@@ -90,6 +92,7 @@ export default function Catalogo({ filter }) {
     setMediaSelected(null);
     setNuevoRating(0);
   };
+
   const handlePendiente = (id) => {
     const media = mediaSaved.find((p) => p.id === id);
     if (media) {
@@ -106,9 +109,12 @@ export default function Catalogo({ filter }) {
       if (filter.genero && media.genero !== filter.genero) {
         return false;
       }
+      if (filter.tipo && media.tipo !== filter.tipo) {
+        return false;
+      }
       if (
-        filter.name &&
-        !media.titulo.toLowerCase().includes(filter.name.toLowerCase())
+        filter.nombre &&
+        !media.titulo.toLowerCase().includes(filter.nombre.toLowerCase())
       ) {
         return false;
       }
@@ -172,13 +178,6 @@ export default function Catalogo({ filter }) {
             onChange={handleFormChange}
             required
           />
-          {/* <input
-            name="genero"
-            placeholder="Género"
-            value={formData.genero}
-            onChange={handleFormChange}
-            required
-          /> */}
           <Select
             name="genero"
             value={formData.genero}
