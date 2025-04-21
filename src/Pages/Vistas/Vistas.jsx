@@ -4,7 +4,7 @@ import MovieContainer from "../../Components/MediaContainer/MediaContainer";
 import Content from "../../Components/Content/Content";
 import Styles from "./Vistas.module.css";
 
-export default function Vistas() {
+export default function Vistas({filter}) {
   const [vistasGuardadas, setVistasGuardadas] = useState([]);
 
   useEffect(() => {
@@ -25,14 +25,47 @@ export default function Vistas() {
     setVistasGuardadas(actualizadas);
   };
 
+  const filteredMedia = vistasValidas
+    .filter((media) => {
+      if (filter.genero && media.genero !== filter.genero) {
+        return false;
+      }
+      if (
+        filter.name &&
+        !media.titulo.toLowerCase().includes(filter.name.toLowerCase())
+      ) {
+        return false;
+      }
+
+      return true;
+    })
+    .sort((a, b) => {
+      switch (filter.order) {
+        case "A-Z":
+          return a.titulo.localeCompare(b.titulo);
+        case "Z-A":
+          return b.titulo.localeCompare(a.titulo);
+        case "Año ↑":
+          return a.año - b.año;
+        case "Año ↓":
+          return b.año - a.año;
+        case "Rating ↑":
+          return a.rating - b.rating;
+        case "Rating ↓":
+          return b.rating - a.rating;
+        default:
+          return 0;
+      }
+    });
+
   return (
     <>
-      {vistasValidas.length === 0 ? (
+      {filteredMedia.length === 0 ? (
         <div className={Styles.noMovies}>
           <p className="paragraph">No hay películas vistas</p>
         </div>
       ) : (
-        vistasValidas.map((vista) => (
+        filteredMedia.map((vista) => (
           <MovieContainer key={vista.id}>
             <Content {...vista} handleVista={handleVista} />
           </MovieContainer>

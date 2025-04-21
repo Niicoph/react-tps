@@ -7,7 +7,7 @@ import Styles from "./Catalogo.module.css";
 import Modal from "../../Components/Modal/Modal";
 import PreMedia from "../../Utils/Media.json";
 
-export default function Catalogo() {
+export default function Catalogo({ filter }) {
   const [mediaSaved, setMediaSaved] = useState([]);
   const [mediaSelected, setMediaSelected] = useState(null);
   const [nuevoRating, setNuevoRating] = useState(0);
@@ -26,7 +26,6 @@ export default function Catalogo() {
 
   useEffect(() => {
     const media = localStorage.getItem("media");
-    console.log(media);
 
     if (!media || media == "[]") {
       // Guardar el array en localStorage
@@ -101,6 +100,39 @@ export default function Catalogo() {
     }
   };
 
+  const filteredMedia = mediaSaved
+    .filter((media) => {
+      if (filter.genero && media.genero !== filter.genero) {
+        return false;
+      }
+      if (
+        filter.name &&
+        !media.titulo.toLowerCase().includes(filter.name.toLowerCase())
+      ) {
+        return false;
+      }
+
+      return true;
+    })
+    .sort((a, b) => {
+      switch (filter.order) {
+        case "A-Z":
+          return a.titulo.localeCompare(b.titulo);
+        case "Z-A":
+          return b.titulo.localeCompare(a.titulo);
+        case "Año ↑":
+          return a.año - b.año;
+        case "Año ↓":
+          return b.año - a.año;
+        case "Rating ↑":
+          return a.rating - b.rating;
+        case "Rating ↓":
+          return b.rating - a.rating;
+        default:
+          return 0;
+      }
+    });
+
   return (
     <>
       <MediaContainer>
@@ -117,7 +149,7 @@ export default function Catalogo() {
           <p className="paragraph">No hay medios guardados</p>
         </div>
       ) : (
-        mediaSaved.map((media) => (
+        filteredMedia.map((media) => (
           <MediaContainer key={media.id}>
             <Content
               {...media}

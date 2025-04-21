@@ -4,7 +4,7 @@ import Content from "../../Components/Content/Content";
 import Styles from "./Pendientes.module.css";
 import Modal from "../../Components/Modal/Modal";
 
-export default function Pendientes() {
+export default function Pendientes({filter}) {
   const [pendientesGuardadas, setPendientesGuardadas] = useState([]);
   const [mediaSelected, setMediaSelected] = useState(null);
   const [modalVistaOpen, setModalVistaOpen] = useState(false);
@@ -54,14 +54,47 @@ export default function Pendientes() {
     setNuevoRating("");
   };
 
+  const filteredMedia = pendientesValidas
+    .filter((media) => {
+      if (filter.genero && media.genero !== filter.genero) {
+        return false;
+      }
+      if (
+        filter.name &&
+        !media.titulo.toLowerCase().includes(filter.name.toLowerCase())
+      ) {
+        return false;
+      }
+
+      return true;
+    })
+    .sort((a, b) => {
+      switch (filter.order) {
+        case "A-Z":
+          return a.titulo.localeCompare(b.titulo);
+        case "Z-A":
+          return b.titulo.localeCompare(a.titulo);
+        case "Año ↑":
+          return a.año - b.año;
+        case "Año ↓":
+          return b.año - a.año;
+        case "Rating ↑":
+          return a.rating - b.rating;
+        case "Rating ↓":
+          return b.rating - a.rating;
+        default:
+          return 0;
+      }
+    });
+
   return (
     <>
-      {pendientesValidas.length === 0 ? (
+      {filteredMedia.length === 0 ? (
         <div className={Styles.noMovies}>
           <p className="paragraph">No hay películas pendientes</p>
         </div>
       ) : (
-        pendientesValidas.map((pendiente) => (
+        filteredMedia.map((pendiente) => (
           <MovieContainer key={pendiente.id}>
             <Content
               {...pendiente}

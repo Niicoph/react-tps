@@ -63,7 +63,6 @@ export default function Movies() {
 
   const handleVista = (id) => {
     const pelicula = peliculasGuardadas.find((p) => p.id === id);
-    console.log(pelicula);
     if (pelicula) {
       setPeliculaSeleccionada(pelicula);
       setModalVistaOpen(true);
