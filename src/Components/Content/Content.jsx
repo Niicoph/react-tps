@@ -17,23 +17,6 @@ export default function Content({
   handleEliminar,
   handleVista,
 }) {
-  const handleDelete = () => {
-    if (tipo === "Pelicula") {
-      const peliculasGuardadas =
-        JSON.parse(localStorage.getItem("peliculas")) || [];
-      const peliculasActualizadas = peliculasGuardadas.filter(
-        (pelicula) => pelicula.id !== id
-      );
-      localStorage.setItem("peliculas", JSON.stringify(peliculasActualizadas));
-    } else if (tipo === "Serie") {
-      const seriesGuardadas = JSON.parse(localStorage.getItem("series")) || [];
-      const seriesActualizadas = seriesGuardadas.filter(
-        (serie) => serie.id !== id
-      );
-      localStorage.setItem("series", JSON.stringify(seriesActualizadas));
-    }
-    handleEliminar(id);
-  };
 
   return (
     <div className={styles.content}>
@@ -41,6 +24,9 @@ export default function Content({
         <img src={image_url} alt={titulo} className={styles.poster} />
         <div className={styles.info}>
           <h2 className={styles.titulo}>{titulo}</h2>
+          <p>
+            <strong>Tipo:</strong> {tipo}
+          </p>
           <p>
             <strong>Género:</strong> {genero}
           </p>
@@ -67,7 +53,7 @@ export default function Content({
           src={DeleteIcon}
           alt="Eliminar"
           title="Eliminar"
-          onClick={handleDelete}
+          onClick={() => handleEliminar(id)}
         />
         <img
           src={WatchlistIcon}

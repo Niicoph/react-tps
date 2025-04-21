@@ -1,15 +1,14 @@
 
-import styles from "./Container.module.css";
+import Styles from "./Container.module.css";
 import Filter from "../Filter/Filter";
-import Movies from '../../Pages/Movies/Movies';
-import Series from '../../Pages/Series/Series';
+import Catalogo from '../../Pages/Catalogo/Catalogo';
 
 export default function Container({ ubicacion }) {
   return (
-    <div className={styles.container}>
+    <div className={Styles.container}>
       <Filter />
-      <div className={styles.contentContainer}>
-        {ubicacion === "Peliculas" ? <Movies /> : ubicacion === "Series" ? <Series /> : null}
+      <div className={Styles.contentContainer}>
+        {ubicacion === "Catalogo" ? <Catalogo /> : ubicacion === "Pendientes" ? null : ubicacion === "Vistas" ? null : null}
       </div>
     </div>
   );
