@@ -1,4 +1,4 @@
-# ***Programacion Web Avanazada - 2025***
+# Programacion Web Avanazada - 2025
 
 ## <strong>Trabajo Práctico: REACT
 <!-- Pendientes más capturas de pantallas (7) d) Agregar capturas de pantalla)-->
@@ -20,7 +20,7 @@
 
 ## Descripción
 
-<img src="\src\assets\ReadmeIMGs\LogoRdme.png" alt="logo Cinemax">
+<img src="src/assets/ReadmeIMGs/logoRdme.png" alt="logo Cinemax">
 
 Cinemax Movie Tracker es una aplicación diseñada para poder llevar un registro de las películas y series que has visto y todas aquellas que te quedan por poder disfrutar. Podes calificarlas según tus gustos, filtrarlas por su género y ordenarlas por nombre, su año de emisión o calificación, y siempre pudiendo agregar todas las que quieras a tu repertorio.
 
