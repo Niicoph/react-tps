@@ -4,7 +4,7 @@ import SeenIcon from "../../assets/Icons/seen.svg";
 import NoSeenIcon from "../../assets/Icons/noseen.svg";
 import DeleteIcon from "../../assets/Icons/delete.svg";
 import WatchlistIcon from "../../assets/Icons/pending.svg";
-import NoWatchListIcon from "../../assets/Icons/nopending.svg";
+import NoWatchListIcon from "../../assets/Icons/noPending.svg";
 
 export default function Content({
   titulo,
