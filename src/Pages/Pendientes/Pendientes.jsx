@@ -121,7 +121,7 @@ export default function Pendientes({filter}) {
                 type="number"
                 min="0"
                 max="10"
-                step="0.1"
+                step="1"
                 name="rating"
                 placeholder="Nuevo Rating"
                 value={nuevoRating}
