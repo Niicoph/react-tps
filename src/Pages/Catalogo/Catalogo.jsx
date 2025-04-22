@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import MediaContainer from "../../Components/MediaContainer/MediaContainer";
 import Content from "../../Components/Content/Content";
-import AddIcon from "../../assets/Icons/Add.svg";
+import AddIcon from "../../assets/Icons/add.svg";
 import Styles from "./Catalogo.module.css";
 import Modal from "../../Components/Modal/Modal";
 import PreMedia from "../../Utils/Media.json";
