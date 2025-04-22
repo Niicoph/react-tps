@@ -4,13 +4,13 @@
 <!-- Pendientes más capturas de pantallas (7) d) Agregar capturas de pantalla)-->
 
 ## Integrantes
-<!-- Pide "carátula con los datos de los miembros del grupo" ¿?
+
 
 - [FAI-3169] Benitez, Franco Fabian
 - [FAI-4594] Pesce, Matías Nicolás
 - [FAI-3220] Reyes Castelló, José Vicente
 
--->
+
 
 ## Enlace a versión web 
 
