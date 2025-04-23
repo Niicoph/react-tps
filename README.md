@@ -1,7 +1,7 @@
 # Programacion Web Avanazada - 2025
 
 ## <strong>Trabajo Práctico: REACT
-<!-- Pendientes más capturas de pantallas (7) d) Agregar capturas de pantalla)-->
+
 
 ## Integrantes
 
@@ -14,9 +14,7 @@
 
 ## Enlace a versión web 
 
-<!-- TBA
-- https://********.vercel.app/
--->
+- https://react-tps-5zs5.vercel.app/
 
 ## Descripción
 
@@ -29,7 +27,7 @@ Cinemax Movie Tracker es una aplicación diseñada para poder llevar un registro
 ## Guia de instalación y visualización del proyecto
 ### Requisitos
 
-- Tener instalado [Node.js](https://nodejs.org/) <!-- <img src="\src\assets\ReadmeIMGs\NodeRdme.png" alt="Node" width="60" height="55"> -->
+- Tener instalado [Node.js](https://nodejs.org/) <!-- <img src="\src\assets\ReadmeIMGs\NodeRdme.png" alt="Node" width="20" height="18"> -->
 
 ### Instalación
 
@@ -44,6 +42,32 @@ git clone https://github.com/Niicoph/react-tps.git
 ```bash
 npm install
 ```
+
+En caso de que ocurra el siguiente error para usuarios que utilicen PowerShell:
+
+```bash
+npm : No se puede cargar el archivo ...\NodeJS\npm.ps1 porque la ejecución de scripts está deshabilitada en este sistema. Para obtener más información, consulta el tema about_Execution_Policies en 
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+En línea: 1 Carácter: 1
++ npm -v
++ ~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+```
+
+Se puede solucionar ejecutando la terminal en modo administrador (PowerShell o Símbolo de Sistema) e ingresando el siguiente comando:
+
+```bash
+Set-ExecutionPolicy RemoteSigned
+```
+
+Para confirmar el cambio ejecute en la terminal el comando:
+
+```bash
+npm -v
+```
+
+Si le devuelve la versión actual del mismo significa que ya puede volver a correr el comando inicial
 
 ### Visualización
 
@@ -78,7 +102,7 @@ http://localhost:5173/
 
 1) **Explicar la función de los siguientes archivos iniciales: index.js, App.js, index.css y package-json.js.**
 
-- Index.js: Es el archivo en el cual React se conecta con el DOM del navegador, el mismo cumple con la función de importar React para permitir el uso de archivos JSX, React-dom para el renderizado en el navegador, el archivo App.js (o App.jsx) como componente principal, index.css como estilos globales. También es el encargado de renderizar el componente principal dentro archivo index.html en el elemento con el id "root".
+- Index.js (o Main.jsx): Es el archivo en el cual React se conecta con el DOM del navegador, el mismo cumple con la función de importar React para permitir el uso de archivos JSX, React-dom para el renderizado en el navegador, el archivo App.js (o App.jsx) como componente principal, index.css como estilos globales. También es el encargado de renderizar el componente principal dentro archivo index.html en el elemento con el id "root".
 
 - App.js (o App.jsx): Este archivo contiene el componente principal de React y tiene la función de contener la lógica y composición de otros componentes, funcionando además como primer nivel de la estructura de árbol de los componentes y punto de organización de la interfaz del usuario.
 
