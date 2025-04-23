@@ -1,4 +1,11 @@
-.title {
+.title1 {
     color: #c5d4e3;
     text-align: center;
+}
+
+.title2 {
+    color: #c5d4e3;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
 }
