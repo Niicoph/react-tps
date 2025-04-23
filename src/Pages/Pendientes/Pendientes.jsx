@@ -59,9 +59,12 @@ export default function Pendientes({filter}) {
       if (filter.genero && media.genero !== filter.genero) {
         return false;
       }
+      if (filter.tipo && media.tipo !== filter.tipo) {
+        return false;
+      }
       if (
-        filter.name &&
-        !media.titulo.toLowerCase().includes(filter.name.toLowerCase())
+        filter.nombre &&
+        !media.titulo.toLowerCase().includes(filter.nombre.toLowerCase())
       ) {
         return false;
       }
