@@ -211,7 +211,7 @@ export default function Container({ ubicacion }) {
         )}
 
         <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
-          <h2>Agregar Película</h2>
+          <h2>Agregar obra</h2>
           <form onSubmit={agregarPelicula} className={Styles.form}>
             <input
               name="titulo"
@@ -229,10 +229,21 @@ export default function Container({ ubicacion }) {
                 "Acción",
                 "Aventura",
                 "Comedia",
+                "Ciencia Ficción",
+                "Crimen",
+                "Deporte",
+                "Documental",
                 "Drama",
                 "Terror",
-                "Ciencia Ficción",
+                "Western"
               ]}
+            />
+            <Select
+              name="tipo"
+              value={formData.tipo}
+              onChange={handleFormChange}
+              title={"Tipo"}
+              options={["Película", "Serie"]}
             />
             <input
               name="director"

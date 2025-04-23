@@ -8,6 +8,7 @@ export default function Select({ title, options, value, name, onChange }) {
       onChange={onChange}
       name={name}
       value={value}
+      required
     >
       <option value="">{title}</option>
       {options.map((option, index) => (
