@@ -24,20 +24,28 @@
     margin-top: 10px;
   }
 
-  .form input {
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2e2e2e;
-    color: white;
-  }
+.form input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2e2e2e;
+  color: white;
+}
 
-  .form button {
-    padding: 10px;
-    background-color: #4caf50;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    margin-top: 10px;
-  }
+.form button {
+  padding: 10px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.addMovie:hover {
+  cursor: pointer;
+}
+
+.noMovies {
+  font-size: 20px;
+}
