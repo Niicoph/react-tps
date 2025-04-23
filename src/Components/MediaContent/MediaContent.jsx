@@ -1,12 +1,13 @@
 import React from "react";
-import styles from "./Content.module.css";
+import styles from "./MediaContent.module.css";
 import SeenIcon from "../../assets/Icons/seen.svg";
 import NoSeenIcon from "../../assets/Icons/noseen.svg";
 import DeleteIcon from "../../assets/Icons/delete.svg";
 import WatchlistIcon from "../../assets/Icons/pending.svg";
 import NoWatchListIcon from "../../assets/Icons/noPending.svg";
+import MediaIconButton from "../MediaIconButton/MediaIconButton";
 
-export default function Content({
+export default function MediaContent({
   titulo,
   genero,
   tipo,
@@ -19,6 +20,7 @@ export default function Content({
   handleEliminar,
   handleVista,
   handlePendiente,
+  ubicacion,
 }) {
   return (
     <div className={styles.content}>
@@ -45,24 +47,28 @@ export default function Content({
       </div>
 
       <div className={styles.actions}>
-        <img
+        <MediaIconButton
           src={rating ? NoSeenIcon : SeenIcon}
           alt="Marcar como vista"
           title="Marcar como vista"
           onClick={() => handleVista(id)}
         />
-        <img
+        
+        {(ubicacion == "Catalogo")?
+          <MediaIconButton
           src={DeleteIcon}
           alt="Eliminar"
           title="Eliminar"
           onClick={() => handleEliminar(id)}
-        />
-        <img
-          src={pendiente ? NoWatchListIcon : WatchlistIcon}
+          /> : null}
+        
+        {(ubicacion == "Catalogo" || ubicacion == "Pendientes")?
+          <MediaIconButton 
+          src={pendiente ? NoWatchListIcon : WatchlistIcon} 
           alt="Agregar a pendientes"
           title="Agregar a lista de pendientes"
           onClick={() => handlePendiente(id)}
-        />
+          />: null}
       </div>
     </div>
   );
