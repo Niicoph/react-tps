@@ -55,7 +55,7 @@ export default function Filter({ handleFilterChange , filter }) {
         <FontLight text="Ordenar" />
         <Select
           name="orden"
-          value={filter.order}
+          value={filter.orden}
           onChange={handleFilterChange}
           title={"- Orden -"}
           options={["A-Z", "Z-A", "Año ↑", "Año ↓", "Rating ↑", "Rating ↓"]}

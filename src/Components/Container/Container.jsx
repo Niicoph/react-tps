@@ -18,7 +18,7 @@ export default function Container({ ubicacion }) {
   const [mediaSelected, setMediaSelected] = useState(null);
   const [filter, setFilter] = useState({
     genero: "",
-    order: "",
+    orden: "",
     nombre : "",
     tipo: "",
   });  
@@ -153,7 +153,7 @@ export default function Container({ ubicacion }) {
       return true;
     })
     .sort((a, b) => {
-      switch (filter.order) {
+      switch (filter.orden) {
         case "A-Z":
           return a.titulo.localeCompare(b.titulo);
         case "Z-A":
