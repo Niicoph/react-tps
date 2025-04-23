@@ -138,7 +138,8 @@ Y que luego de confirmar su obra se agrega a su pestaña de Vistas, lo identific
 
 Y le va a solicitar la información de su obra (y recuerde que tiene que elegir una categoría y un tipo)
 
-<img src="./src/assets/ReadmeIMGs/modal agregar.jpg" alt="modal agregar" width="520" height="300">
+<img src="./src/assets/ReadmeIMGs/modal agregar.jpg" alt="modal agregar" width="520" height="300"> <br>
+> Debe completar todos los campos además de elegir un `Género` y un `Tipo`
 
 #### Ahora ya puede comenzar a organizar sus obras preferidas
 
@@ -148,11 +149,11 @@ Y le va a solicitar la información de su obra (y recuerde que tiene que elegir 
 <img src="./src/assets/ReadmeIMGs/pendientes.jpg" alt="Pendientes" width="800" height="600">
 
 ### Vistas
-Y también registrar las obras que ya ha podido disfrutar
+Y también llevar un registro de las obras que ya ha podido disfrutar
 
 <img src="./src/assets/ReadmeIMGs/vistas.jpg" alt="Vistas" width="800" height="600">
 
-> Siempre puede cambiar su calificación tocando el ícono de vista, pero cuidado, si la misma es de `0` esa obra dejará de estar presente en esta pestaña, pero no se preocupe que la va a poder encontrar en su catálogo.
+> Siempre puede cambiar la calificación de cualquier obra tocando su ícono de vista, pero cuidado, si la misma es de `0` dejará de estar presente en esta pestaña, pero no se preocupe que la va a poder encontrar en su catálogo.
 
 ## Consignas a responder
 
