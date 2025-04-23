@@ -9,7 +9,7 @@ export default function Filter({ handleFilterChange , filter }) {
         <FontLight text="Buscar por" />
         <div className={Styles.selects}>
           <Select
-            title={"Género"}
+            title={"- Género -"}
             name="genero"
             value={filter.genero}
             onChange={handleFilterChange}
@@ -17,13 +17,17 @@ export default function Filter({ handleFilterChange , filter }) {
               "Acción",
               "Aventura",
               "Comedia",
+              "Ciencia Ficción",
+              "Crimen",
+              "Deporte",
+              "Documental",
               "Drama",
               "Terror",
-              "Ciencia Ficción",
+              "Western",
             ]}
           />
           <Select
-            title={"Tipo"}
+            title={"- Tipo -"}
             name="tipo"
             value={filter.tipo}
             onChange={handleFilterChange}
@@ -50,10 +54,10 @@ export default function Filter({ handleFilterChange , filter }) {
       <div className={Styles.order}>
         <FontLight text="Ordenar" />
         <Select
-          name="order"
+          name="orden"
           value={filter.order}
           onChange={handleFilterChange}
-          title={"Orden"}
+          title={"- Orden -"}
           options={["A-Z", "Z-A", "Año ↑", "Año ↓", "Rating ↑", "Rating ↓"]}
         />
       </div>
