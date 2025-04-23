@@ -27,7 +27,7 @@ Cinemax Movie Tracker es una aplicación diseñada para poder llevar un registro
 ## Guia de instalación y visualización del proyecto
 ### Requisitos
 
-- Tener instalado [Node.js](https://nodejs.org/) <!-- <img src="\src\assets\ReadmeIMGs\NodeRdme.png" alt="Node" width="20" height="18"> -->
+- Tener instalado [Node.js](https://nodejs.org/)
 
 ### Instalación
 
@@ -97,6 +97,62 @@ http://localhost:5173/
 
 2) Ingresar en su navegador web ingresar la URL copiada y comienze a navegar por el proyecto.
 
+## Tutorial de uso
+### Home
+#### Al ingresar se encontrará con el catálogo de películas
+
+<img src="./src/assets/ReadmeIMGs/catalogo.jpg" alt="Catalogo" width="800" height="600"><br>
+
+> El listado précargado de películas está configurado de forma que si todas se borran, vuelva a cargarse al refrescar la página.
+
+#### Puede filtrar por género y tipo de obra como también ordenarlas por nombre, año o calificación, combinandolos para una mejor personalización
+
+<img src="./src/assets/ReadmeIMGs/filtro.jpg" alt="Filtro" width="800" height="600">
+
+#### O también buscar por nombre
+
+<img src="./src/assets/ReadmeIMGs/busqueda.jpg" alt="Busqueda" width="800" height="600">
+
+#### Cada obra en el catálogo tiene tres opciones 
+ <img src="./src/assets/ReadmeIMGs/icons.jpg" alt="Iconos" width="120" height="35" >
+
+#### El ícono de vista, que al seleccionarlo le solicita calíficar la película 
+
+#### <img src="./src/assets/ReadmeIMGs/modal visto.jpg" alt="Modal visto" width="520" height="220">
+
+Y que luego de confirmar su obra se agrega a su pestaña de Vistas, lo identificará al ver el cambio en el ícono 
+
+<img src="./src/assets/ReadmeIMGs/iconvista.jpg" alt="Icono vista" width="60" height="60">
+
+#### El ícono de borrar, con él removerá la obra del catálogo (y cuidado, también lo quitará de Pendientes y Vistas) 
+
+<img src="./src/assets/ReadmeIMGs/iconborrar.jpg" alt="Icono borrar" width="60" height="60">
+
+#### Y por último el ícono de pendiente, con el que la obra se agrega a su pestaña de Pendientes, que también cambia para ayudarlo 
+
+<img src="./src/assets/ReadmeIMGs/iconpendiente.jpg" alt="Icono pendiente" width="60" height="60">
+
+#### Pero si esas obras no son suficientes siempre puede agregar más a su catálogo haciendo click en la tarjeta
+
+<img src="./src/assets/ReadmeIMGs/agregar.jpg" alt="Agregar" width="120" height="180">
+
+Y le va a solicitar la información de su obra (y recuerde que tiene que elegir una categoría y un tipo)
+
+<img src="./src/assets/ReadmeIMGs/modal agregar.jpg" alt="modal agregar" width="520" height="300">
+
+#### Ahora ya puede comenzar a organizar sus obras preferidas
+
+### Pendientes
+
+#### Aquí puede ver todas las obras que todavía no ha podido terminar
+<img src="./src/assets/ReadmeIMGs/pendientes.jpg" alt="Pendientes" width="800" height="600">
+
+### Vistas
+Y también registrar las obras que ya ha podido disfrutar
+
+<img src="./src/assets/ReadmeIMGs/vistas.jpg" alt="Vistas" width="800" height="600">
+
+> Siempre puede cambiar su calificación tocando el ícono de vista, pero cuidado, si la misma es de `0` esa obra dejará de estar presente en esta pestaña, pero no se preocupe que la va a poder encontrar en su catálogo.
 
 ## Consignas a responder
 
