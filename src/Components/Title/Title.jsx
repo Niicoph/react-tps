@@ -7,7 +7,7 @@ export default function Title({ text }) {
     const parts = text.split(/<br\s*\/?>/i);
   return (
       <div>
-         <h1 className={`${Styles.title}`}>
+         <h1 className={`${Styles.title} inter-light`}>
             {parts.map((part, index) => (
             <React.Fragment key={index}>
                 {part}
