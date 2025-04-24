@@ -53,7 +53,7 @@ export default function Container({ ubicacion }) {
       // Guardar el array en localStorage
       localStorage.setItem("media", JSON.stringify(PreMedia));
     }
-  }, []);
+  }, []); //Estos dos useeffect podrian ser uno solo
 
   useEffect(() => {
     const media = JSON.parse(localStorage.getItem("media")) || [];

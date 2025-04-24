@@ -14,7 +14,8 @@ export default function Header({ handleUbicacionChange }) {
             <li
               key={ubicacion}
               className={Styles.headerItem}
-              onClick={() => handleUbicacionChange(ubicacion)}
+              // Si tiene onClick deberia ser un boton. Semanticamente un li no tiene que tener onclick
+              onClick={() => handleUbicacionChange(ubicacion)} 
             >
               <FontBold text={ubicacion} />
             </li>

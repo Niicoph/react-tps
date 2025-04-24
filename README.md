@@ -1,3 +1,23 @@
+Correcciones: 
+
+Excelente trabajo. 
+excelente integracion entre componentes: Container, MediaContent, MediaIconButton, Modal, hay mucho esfuerzo aca.
+Todos estos componentes van a permitir a la app crecer sin inconvenientes. Aparte hay un modularización clara y consistente, cada componente tiene su rol y se entiende su existencia.
+UI intuitiva con buena experiencia de usuario
+Buen uso de useState y useEffect para manejar lógica y sincronización con localStorage
+Los modales para agregar y calificar están muy bien resueltos
+Me gusto la interacción de tener que colocar las pelis en "por ver" y "vistas" y como pide el valor del rating una vez vistas. Fue un buen detalle
+
+
+Mejoras:
+algunos valores hardcodeados en filtros y orden podrian pasar a constantes internas, por fuera de la funcion de render.
+hay algunos condicionales repetidos que podrían extraerse a variables para legibilidad, nada grave.
+
+Nota: 10.
+
+
+
+
 # Programacion Web Avanazada - 2025
 
 ## <strong>Trabajo Práctico: REACT

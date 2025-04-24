@@ -53,7 +53,7 @@ export default function MediaContent({
           title="Marcar como vista"
           onClick={() => handleVista(id)}
         />
-        
+        {/* Usar siempre === para comparaciones */}
         {(ubicacion == "Catalogo")?
           <MediaIconButton
           src={DeleteIcon}
@@ -61,7 +61,8 @@ export default function MediaContent({
           title="Eliminar"
           onClick={() => handleEliminar(id)}
           /> : null}
-        
+        {/* Usar siempre === para comparaciones */}
+
         {(ubicacion == "Catalogo" || ubicacion == "Pendientes")?
           <MediaIconButton 
           src={pendiente ? NoWatchListIcon : WatchlistIcon} 
