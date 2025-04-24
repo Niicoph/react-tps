@@ -41,6 +41,7 @@ export default function Filter({ handleFilterChange , filter }) {
 
       <div className={Styles.searchContainer}>
         <FontLight text="Buscar" />
+        {/* A modo feedback: podrian poner un placeholder aca, me costo en la UI acordarme que era que input  */}
         <input
           onChange={handleFilterChange}
           type="text"
